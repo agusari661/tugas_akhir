@@ -52,6 +52,9 @@ Route::patch('/supplier/status/{id}', [SupplierController::class, 'toggleStatus'
 // Profile Admin
 Route::get('profile/{id}', [ProfileEksekutifController::class, 'index'])->name('profile.eksekutif');
 Route::post('/profile/update-picture', [ProfileEksekutifController::class, 'updatePicture'])->name('profile.update-picture');
+Route::post('/profile/change-password', [ProfileEksekutifController::class, 'changePassword'])
+    ->name('profile.change-password');
+
 
 // Data Admin
 Route::get('/data-admin/add', [AdminController::class, 'formAddDataAdmin'])->name('admin.tambah.data');
